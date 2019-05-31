@@ -1,0 +1,2 @@
+# Zerodha-
+BSE Equity List
