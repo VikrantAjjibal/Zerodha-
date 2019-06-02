@@ -44,5 +44,5 @@ class HelloWorld(object):
     index.exposed = True
 
 # bind to all IPv4 interfaces
-cherrypy.config.update({'server.socket_host': 'https://zerodhatest.herokuapp.com/'})
+cherrypy.config.update({'server.socket_host': '127.0.0.1'})
 cherrypy.quickstart(HelloWorld())
