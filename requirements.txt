@@ -1,2 +1,0 @@
-pip install cherrypy
-pip install redis
