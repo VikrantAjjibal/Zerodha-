@@ -10,8 +10,15 @@ class HelloWorld(object):
         #Download Zip file
         import requests
         from datetime import date, timedelta
-        yesterday = date.today() - timedelta(days=1)
-        zipfilename = "EQ"+yesterday.strftime('%d%m%y')+"_CSV.zip"
+        if date.today().weekday() == 0:
+            yesterday = date.today() - timedelta(days=3)
+            zipfilename = "EQ"+yesterday.strftime('%d%m%y')+"_CSV.zip"
+        elif date.today().weekday() == 6:
+            yesterday = date.today() - timedelta(days=2)
+            zipfilename = "EQ"+yesterday.strftime('%d%m%y')+"_CSV.zip"
+        else:
+            yesterday = date.today() - timedelta(days=1)
+            zipfilename = "EQ"+yesterday.strftime('%d%m%y')+"_CSV.zip"
         url = 'https://origin-www.bseindia.com/download/BhavCopy/Equity/'+zipfilename
         content = requests.get(url)
         
