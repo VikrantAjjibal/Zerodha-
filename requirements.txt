@@ -22,7 +22,7 @@ protobuf==3.7.0
 pycparser==2.19
 pyodbc==4.0.26
 pytz==2019.1
-pywin32==224
+pywin32==301
 redis==3.2.1
 requests==2.20.1
 six==1.12.0
